@@ -143,3 +143,7 @@ Requires JDK 17.
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+## Related
+
+- **Want the broken brewing recipes back, not just suppressed?** Install the companion content-restoration addon: **[Vonix-Network/OffTheGrid-BrewingRestore](https://github.com/Vonix-Network/OffTheGrid-BrewingRestore)**. It registers the 7 missing items, restores their brewing recipes, and wires Isle of Berk dragon drops as the survival source. It hard-depends on this fix mod (suppression must run first).
