@@ -1,0 +1,36 @@
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
+issueTrackerURL="https://github.com/Vonix-Network/OffTheGrid-BrewingFix/issues"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+authors="${mod_authors}"
+description='''${mod_description}'''
+displayURL="https://github.com/Vonix-Network/OffTheGrid-BrewingFix"
+
+[[dependencies.${mod_id}]]
+    modId="forge"
+    mandatory=true
+    versionRange="${forge_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+# off_the_grid is NOT a mandatory dep — when absent, this patch is a harmless no-op.
+# When present, we want to load AFTER it so its recipes are already in the registry
+# at FMLCommonSetupEvent.
+[[dependencies.${mod_id}]]
+    modId="off_the_grid"
+    mandatory=false
+    versionRange="[1.0,)"
+    ordering="AFTER"
+    side="BOTH"
